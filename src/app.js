@@ -6,6 +6,7 @@ class App extends Component{
             <>
             <h1>Products Name1</h1>
             <h1>Products Name2</h1>
+            <h1>Products Name3</h1>
             </>
         );
     }
