@@ -1,7 +1,6 @@
 
 import React from "react";
 import  'bootstrap/dist/css/bootstrap.min.css';
-import { useState } from "react";
 
 const Product =  ({productName, count  , id , onDelete , children, onIncrement , onDecrement}) => {
 
