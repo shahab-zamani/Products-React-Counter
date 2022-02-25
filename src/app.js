@@ -1,4 +1,6 @@
 import {Component} from 'react';
+import Products from './components/products';
+import Navbar from './components/navbar';
 
 // class App extends Component{
 //     render () {
@@ -16,9 +18,8 @@ import {Component} from 'react';
 function App (){
     return (
                     <>
-                    <h1>Products Name1</h1>
-                    <h1>Products Name2</h1>
-                    <h1>Products Name3</h1>
+                    <Navbar></Navbar>
+                    <Products></Products>
                     </>
                 );   
 }
