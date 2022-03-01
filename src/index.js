@@ -1,7 +1,6 @@
 //import App from './app';
 import App from './components/functional/app.jsx';
 import reactDOM from 'react-dom'; 
-import {render} from "@testing-library/react";
 //import Products from './components/functional/products'
 //import Products from './components/products'
 
