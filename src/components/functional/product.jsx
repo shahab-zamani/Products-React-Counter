@@ -1,9 +1,11 @@
 
 import React from "react";
 import  'bootstrap/dist/css/bootstrap.min.css';
+import {useContext} from "react";
+import ProductContext from './../../Context/products';
 
-const Product =  ({productName, count  , id , onDelete , children, onIncrement , onDecrement}) => {
-
+const Product =  ({productName, count  , id  , children /*, onIncrement , onDecrement , onDelete*/}) => {
+    const productContext = useContext(ProductContext);
     //const [count,setCount] = useState(propCount) ;
 
     return ( 
@@ -20,15 +22,15 @@ const Product =  ({productName, count  , id , onDelete , children, onIncrement ,
 
 
      function handleIncrement ()  {
-        onIncrement(id);
+        productContext.onIncrement(id);
  }
  
  function handleDecrement ()  {
-        onDecrement(id);
+    productContext.onDecrement(id);
  }
  
  function handleDelete  ()  {
-     onDelete(id);
+    productContext.onDelete(id);
  }
  
  function format () {
