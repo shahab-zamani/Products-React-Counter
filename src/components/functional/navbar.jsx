@@ -1,21 +1,24 @@
-import React, { Component } from 'react';
+import React from 'react';
 import  'bootstrap/dist/css/bootstrap.min.css';
-import Products from './products';
+import {useContext} from 'react';
+import ProductContext from './../../Context/products';
 
 
 const Navbar = (props) => {
+    const productContext = useContext(ProductContext);
+
     return ( 
         <nav className='navbar navbar-bg navbar-light '>            
 
         <div className="container-fluid"></div>
-        <a href='#'   className='navbar-brand'> Navbar {calculateSum()} </a>
+        <a href='#' className='navbar-brand'> Navbar {calculateSum()} </a>
         </nav>
     );
 
     
     function calculateSum(){ 
         let sum = 0;
-       props.products.forEach( p => {
+       productContext.products.forEach( p => {
             sum += p.count ;            
         })
         return sum 
