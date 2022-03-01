@@ -2,8 +2,11 @@ import React from "react";
 import './product.css';
 import {Component} from "react";
 import  'bootstrap/dist/css/bootstrap.min.css';
+import ProductContext from './../Context/products';
+
 
 class Product extends Component {
+  static contextType = ProductContext;
      //state = {
        //  count : this.props.count, 
     // }
@@ -33,7 +36,7 @@ class Product extends Component {
 
 handleIncrement = () => {
   
-  this.props.onIncrement(this.props.id);
+  this.context.onIncrement(this.props.id);
   
     // const count = this.state.count;
     //const {count} = this.state;
@@ -42,13 +45,13 @@ handleIncrement = () => {
 }
 
 handleDecrement = () => {
-    this.props.onDecrement(this.props.id);
+    this.context.onDecrement(this.props.id);
 
    //this.setState({count : this.state.count - 1})
 }
 
 handleDelete = () => {
-this.props.onDelete(this.props.id);
+this.context.onDelete(this.props.id);
 }
 
 format (count){
